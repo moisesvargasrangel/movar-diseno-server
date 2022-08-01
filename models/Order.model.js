@@ -1,29 +1,29 @@
-const { Schema, model } = require("mongoose");
+// const { Schema, model } = require("mongoose");
 
-const orderSchema = new Schema(
-  {
-    user: {
-      type: String,
-      required: true
-    },
+// const orderSchema = new Schema(
+//   {
+//     user: {
+//       type: String,
+//       required: true
+//     },
 
-    delivery: Date,
-    status: "String",
+//     delivery: Date,
+//     status: "String",
     
-    products:[{
-      type:Schema.Types.ObjectId,
-      ref:'Product',
-      required: false,
-    }],
-  },
+//     products:[{
+//       type:Schema.Types.ObjectId,
+//       ref:'Product',
+//       required: false,
+//     }],
+//   },
 
 
 
-  {
-    timestamps: true,
-  }
-)
+//   {
+//     timestamps: true,
+//   }
+// )
 
-const Order = model("Order", orderSchema);
-module.exports = Order;
+// const Order = model("Order", orderSchema);
+// module.exports = Order;
 

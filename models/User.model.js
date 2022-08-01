@@ -9,10 +9,10 @@ const userSchema = new Schema(
     },
     password: String,
   
-    orders:[{
-      type:Schema.Types.ObjectId,
-      ref:'Order',
-    }]
+    // orders:[{
+    //   type:Schema.Types.ObjectId,
+    //   ref:'Order',
+    // }]
   },
 
   {
