@@ -3,12 +3,24 @@ const productSchema = new Schema(
   {
     name: {
       type: String,
-      required: true
+      required: true,
+      minLength: 3,
+      trim: true
     },
 
     price: Number,
-    material: "String",
-    description: "String"
+
+    material: {
+        type: String,
+        minLength: 3,
+        trim: true
+    },
+    
+    description: {
+        type: String,
+        minLength: 3,
+        trim: true
+    }
   },
   {
     timestamps: true,
