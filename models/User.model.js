@@ -5,10 +5,22 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      unique: true 
     },
-    password: String,
-  
+    password:{
+      type: String,
+      required: true,
+      trim: true,
+      minLength: 8
+    }, 
+    fullName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    country: String,
+    email: String,
     // orders:[{
     //   type:Schema.Types.ObjectId,
     //   ref:'Order',
@@ -18,8 +30,6 @@ const userSchema = new Schema(
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
-
-    
   },
 
 );

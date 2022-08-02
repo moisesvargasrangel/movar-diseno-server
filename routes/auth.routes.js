@@ -35,7 +35,7 @@ router.get("/session", (req, res) => {
 });
 
 router.post("/signup", isLoggedOut, (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, email, country, fullName } = req.body;
 
   if (!username) {
     return res
@@ -77,6 +77,10 @@ router.post("/signup", isLoggedOut, (req, res) => {
         return User.create({
           username,
           password: hashedPassword,
+          fullName,
+          country,
+          email,   
+
         });
       })
       .then((user) => {
