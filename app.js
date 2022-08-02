@@ -19,7 +19,7 @@ require("./config")(app);
 const allRoutes = require("./routes/index.routes");
 app.use("/api", allRoutes);
 
-// Products Routes
+// Routes
 const productRoutes = require("./routes/product.routes")
 app.use("/api", productRoutes);
 
