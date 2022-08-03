@@ -20,6 +20,11 @@ const productSchema = new Schema(
         type: String,
         minLength: 3,
         trim: true
+    },
+
+    image:{
+      type: String,
+      default:"https://digitaria-academy.com/wp-content/uploads/2020/12/EnMantenimiento.jpg"
     }
   },
   {

@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 //  POST /api/products  -  Creates a new product
 
 router.post('/gallery', (req, res, next) => {
-  const { name, price, material, description } = req.body;
+  const { name, price, material, description, image } = req.body;
 
-  Product.create({ name, price, material, description})
+  Product.create({ name, price, material, description, image})
     .then((response) => res.json(response))
     .catch((err) => res.json(err));
 });
