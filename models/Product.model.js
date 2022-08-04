@@ -25,7 +25,8 @@ const productSchema = new Schema(
     image:{
       type: String,
       default:"https://digitaria-academy.com/wp-content/uploads/2020/12/EnMantenimiento.jpg"
-    }
+    },
+
   },
   {
     timestamps: true,
