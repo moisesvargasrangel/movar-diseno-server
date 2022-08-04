@@ -36,7 +36,6 @@ router.get('/gallery/:productId', (req, res, next) => {
     .catch(error => res.json(error));
 });
  
- 
 // PUT  /api/gallery/:productId  -  Updates a specific product by id
 router.put('/gallery/:productId', (req, res, next) => {
   const { productId } = req.params;
@@ -50,7 +49,6 @@ router.put('/gallery/:productId', (req, res, next) => {
     .then((updatedProduct) => res.json(updatedProduct))
     .catch(error => res.json(error));
 });
- 
  
 // DELETE  /api/gallery/:productId  -  Deletes a specific product by id
 router.delete('/gallery/:productId', (req, res, next) => {
